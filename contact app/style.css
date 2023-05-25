@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+}
+
+.container-left{
+    background-color: #87CBB9;
+    height: 100vh;
+    position: relative;
+    display: fixed;
+    overflow-y: scroll;
+    position: sticky;
+    top: 0;
+}
+.container-left h1{
+    text-align: center;
+    padding: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+}
+.input{
+    padding: 1em;
+}
+.input label{
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 5px;
+}
+.input input{
+    margin-top: 10px;
+}
+
+.input input[type="text"], 
+input[type="number"]{
+    padding: 1em;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.input input[type="text"]:hover, 
+input[type="number"]:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.input input[type="file"] {
+    display: block;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    width: 200px;
+}
+
+.input input[type="file"]:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.input input[type="file"]::-webkit-file-upload-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #45a049;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    padding: 1em;
+    gap: 20px;
+    margin: -10px auto;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background-color: #45a049;
+    color: #fff;
+}
+
+
+/* list contact */
+.container-right{
+    background-color: #87CBB9;
+}
+
+.container-right h1{
+    text-align: center;
+    padding: 10px;
+}
+.row-boxContact{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-right .box-contact{
+    width: 300px;
+    max-height: 800px;
+    margin: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    transition: all 0.5s ease;
+    overflow: auto;
+}
+.box-contact:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box-contact .close{
+    cursor: pointer;
+}
+.box-contact .img-profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5px auto;
+    background-color: #d8d5d5;
+    overflow: hidden;
+    border: solid;
+}
+.img-profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.identity .bio p{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+.bio{
+    padding-left: 45%;
+}
+
+.identity ul{
+    gap: 1em;
+    padding-top: 20px;
+}
+.identity ul li{
+    padding: 5px;
+}
