@@ -1,15 +1,16 @@
-document.querySelector('.form').addEventListener('submit', function(event){
-    event.preventDefault();
-  
-    const rowBoxContact = document.querySelector('.row-boxContact');
-  
-    const telpInput = document.querySelector('.telp');
+const telpInput = document.querySelector('.telp');
       telpInput.addEventListener('input', function() {
         const inputValue = this.value;
         if (inputValue.length > 12) {
           this.value = inputValue.slice(0, 12); // Menghapus karakter-karakter tambahan
         }
       });
+
+
+document.querySelector('.form').addEventListener('submit', function(event){
+    event.preventDefault();
+  
+    const rowBoxContact = document.querySelector('.row-boxContact');
 
     // ambil input
     const name = document.querySelector('.name').value;
