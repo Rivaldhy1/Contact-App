@@ -6,12 +6,10 @@ const telpInput = document.querySelector('.telp');
         }
       });
 
-
 document.querySelector('.form').addEventListener('submit', function(event){
     event.preventDefault();
   
     const rowBoxContact = document.querySelector('.row-boxContact');
-
     // ambil input
     const name = document.querySelector('.name').value;
     const bio = document.querySelector('.bio').value;
@@ -101,16 +99,14 @@ document.querySelector('.form').addEventListener('submit', function(event){
     // Menambahkan elemen .box-contact baru ke dalam .row-boxContact
     rowBoxContact.appendChild(newContact);
 
-
     // menghapus box contact
-    const closeButton = document.querySelector('.close');
-      closeButton.addEventListener('click', function(){
-        const boxContact = this.parentNode;
-        boxContact.remove();  
+    const closeButtons = document.querySelectorAll('.close');
+      closeButtons.forEach(function(button) {
+        button.addEventListener('click', function(){
+          const boxContact = this.parentNode;
+          boxContact.remove();  
+        });
       });
-  
+
     document.querySelector('.form').reset();
 });
-
-
-
